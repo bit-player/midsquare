@@ -1,0 +1,104 @@
+
+/*
+CSS for four-digit middle-square RNG demo
+Brian Hayes 2022
+*/
+
+#container {
+	margin: auto;
+}
+
+#scroller {
+	width: 400px;
+	height: 600px;
+	margin: 10px auto;
+	padding: 0px;
+	background-color: rgb(232,232,238);
+	border: 1px solid #7f7f7f;
+	overflow-y: scroll;
+}
+
+#integers {
+	padding: 0px;
+	background-color: rgb(232,232,238);
+	counter-reset: line-number -1;
+}
+
+p.num-p {
+	width: fit-content;
+	margin: 0;
+	font-family: Courier, monospace;
+	font-size: 24px;
+	letter-spacing: 3px;
+	counter-increment: line-number;
+}
+
+p.num-p:before {
+	content: counter(line-number); 
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing: 0px;
+	color: rgb(184, 174, 174);
+	width: 30px;
+	margin-right: 86px;
+	display: inline-block;
+	text-align: right;
+}
+
+span.hi-digits,
+span.lo-digits {
+	color: rgb(144, 130, 130);
+}
+
+span.mid-digits {
+	color: rgb(21, 92, 223);
+	padding: 0px 5px;
+}
+
+span.mid-digits.cyclic {
+	color: rgb(230, 111, 72);
+}
+
+#controls {
+	position: relative;
+	width: 400px;
+	height: 48px;
+	margin: 10px auto;
+	border: 1px solid #7f7f7f;
+	background-color: rgb(232,232,238);
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+#controls input {
+	width: 80px;
+	height: 28px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: Courier, monospace;
+	font-size: 24px;
+	letter-spacing: 3px;
+	color: rgb(21, 92, 223);
+}
+
+#controls label {
+	position: absolute;
+	left: 40px;
+	top: 7.5px;
+	color: #7f7f7f;
+}
+
+button {
+	width: 50px;
+	margin: 16px auto;
+}
+
+#stop-go {
+	position: absolute;
+	left: 258px;
+}
+
+#clear {
+	position: absolute;
+	left: 330px;
+}
