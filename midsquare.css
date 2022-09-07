@@ -10,8 +10,8 @@ Brian Hayes 2022
 
 #scroller {
 	width: 400px;
-	height: 600px;
-	margin: 10px auto;
+	height: 500px;
+	margin: 10px auto 0px auto;
 	padding: 0px;
 	background-color: rgb(232,232,238);
 	border: 1px solid #7f7f7f;

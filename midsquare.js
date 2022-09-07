@@ -3,10 +3,10 @@
  * Demo of middle-square pseudo-random number generator,
  * with numbers of four decimal digits.
  *
- * Code by Brian Hayes, July 2022.
+ * Code by Brian Hayes, July-September 2022.
  */
 
-{ // block for private namespace
+ // block for private namespace
 
 	// GLOBALS
 
@@ -254,6 +254,19 @@
 	}                                                     //   bottom of the list in view
 	
 
+	// A condensed version of the midsquare procedure, specialized
+	// for eight-digit numerals, just for expository purposes.
+	
+	function midsquare(xStr) {
+		const xNum = parseInt(xStr, 10);
+		const sqrNum = xNum * xNum;
+		let sqrStr = sqrNum.toString(10);
+		sqrStr = padLeftWithZeros(sqrStr, 8);
+		const midStr = sqrStr.substring(2, 6);
+		return midStr;
+}
+
+
   // The function called every 50 milliseconds by the timer, to add
 	// one more square and its middle-digits random iterate to the list.
 
@@ -300,4 +313,4 @@
 		}
 	}
   
-} // end of outer namespace block
+ // end of outer namespace block
